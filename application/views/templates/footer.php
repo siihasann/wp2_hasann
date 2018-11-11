@@ -2,8 +2,7 @@
 <footer class="sticky-footer bg-white">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Web Programming Univ. BSI with
-                Bootstrap SB Admin 2 <?= date('Y'); ?></span>
+            <span>Copyright &copy; Web Programming Univ. BSI with Bootstrap SB Admin 2 <?= date('Y'); ?></span>
         </div>
     </div>
 </footer>
@@ -23,7 +22,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Yakin
                     mau keluar?</h5>
-                <button class="close" type="button" datadismiss="modal" aria-label="Close">
+                <button class="close" type="button" data- dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">×</span>
                 </button>
             </div>
@@ -43,14 +42,15 @@
 <script src="<?= base_url('assets/');
                 ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- Core plugin JavaScript-->
-<script src="<?= base_url('assets/'); ?>vendor/jqueryeasing/jquery.easing.min.js"></script>
+<script src="<?= base_url('assets/'); ?>vendor/jquery-
+easing/jquery.easing.min.js"></script>
 <!-- Custom scripts for all pages-->
 <script src="<?= base_url('assets/'); ?>js/sb-admin-
 2.min.js"></script>
 <script>
     $('.custom-file-input').on('change', function() {
         let fileName = $(this).val().split('\\').pop();
-        $(this).next('.custom-filelabel').addClass("selected").html(fileName);
+        $(this).next('.custom-file-label').addClass("selected").html(fileName);
     });
     $(document).ready(function() {
         $("#table-datatable").dataTable();

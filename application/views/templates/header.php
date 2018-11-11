@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <title>pustaka-booking | <?= $judul; ?></title>
     <!-- Custom fonts for this template-->
-    <link href="<?= base_url('assets/'); ?>vendor/fontawesomefree/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="<?= base_url('assets/'); ?>vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="<?= base_url('assets/'); ?>datatable/datatables.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="<?= base_url('assets/');
                                         ?>datatable/jquery.dataTables.js'; ?>"></script>
