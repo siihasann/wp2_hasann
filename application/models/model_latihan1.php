@@ -1,4 +1,4 @@
-<?php 
+<?php
 class model_latihan1 extends CI_Model
 {
     //membuat variable untuk menumpang nilai
@@ -11,8 +11,5 @@ class model_latihan1 extends CI_Model
         $this->nilai2 = $nil2;
         $this->hasil = $this->nilai1 + $this->nilai2;
         return $this->hasil;
-    }  
-} 
-
-
-
+    }
+}
