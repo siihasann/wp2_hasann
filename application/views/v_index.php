@@ -7,7 +7,7 @@
     <p>MVC adalah teknik atau konsep yang memisahkan
         komponen utama menjadi tiga komponen yaitu model, view dan
         controller.</p>
-    <ol type=”a”>
+    <ol type="a">
         <li>Model</li>
         <p align=’justify’>Model adalah kelas yang merepresentasikan atau
             memodelkan tipe data yang akan digunakan oleh aplikasi. Model juga
@@ -46,4 +46,3 @@
             menangani bagian controller dan modelnya. Jadi pembagian tugas pun
             menjadi mudah dan pengembangan aplikasi dapat di lakukan dengan
             cepat dan terstruktur.</p>
-</section>
