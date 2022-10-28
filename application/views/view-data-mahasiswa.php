@@ -46,24 +46,17 @@
                 </td>
             </tr>
             <tr>
-                <td>Kelas</td>
+                <td>Tempat Lahir</td>
                 <td>:</td>
                 <td>
                     <?= $templahir; ?>
                 </td>
             </tr>
-            <tr>
-                <td>Tempat Lahir</td>
-                <td>:</td>
-                <td>
-                    <?= $alamat; ?>
-                </td>
-            <tr>
-                <td>Alamat</td>
-                <td>:</td>
-                <td>
-                    <?= $alamat; ?>
-                </td>
+            <td>Alamat</td>
+            <td>:</td>
+            <td>
+                <?= $alamat; ?>
+            </td>
             <tr>
                 <td>Jenis Kelamin</td>
                 <td>:</td>
