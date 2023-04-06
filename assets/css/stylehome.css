@@ -1,0 +1,14 @@
+.navlink {
+	background-color: #00802b;
+	font-size: 1.1rem;
+	text-align: center;
+}
+.navlink a {
+	color: #fff !important;
+	font-family: "Poppins", sans-serif;
+	padding: 1rem;
+}
+
+.navlink a:hover {
+	background: #006622;
+}

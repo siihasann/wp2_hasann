@@ -1,8 +1,6 @@
-<?php
-defined('BASEPATH') or exit('No direct script access allowed');
+<?php defined('BASEPATH') or exit('No direct script access allowed');
 class ModelBuku extends CI_Model
-{
-    //manajemen buku
+{ //manajemen buku 
     public function getBuku()
     {
         return $this->db->get('buku');
@@ -31,8 +29,7 @@ class ModelBuku extends CI_Model
         }
         $this->db->from('buku');
         return $this->db->get()->row($field);
-    }
-    //manajemen kategori
+    } //manajemen kategori 
     public function getKategori()
     {
         return $this->db->get('kategori');
@@ -52,14 +49,11 @@ class ModelBuku extends CI_Model
     public function updateKategori($where = null, $data = null)
     {
         $this->db->update('kategori', $data, $where);
-    }
-    //join
+    } //join 
     public function joinKategoriBuku($where)
     {
-        $this->db->select('buku.id_kategori,kategori.kategori');
         $this->db->from('buku');
-        $this->db->join('kategori', 'kategori.id =
-buku.id_kategori');
+        $this->db->join('kategori', 'kategori.id_kategori = buku.id_kategori');
         $this->db->where($where);
         return $this->db->get();
     }

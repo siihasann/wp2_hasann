@@ -5,7 +5,7 @@ class autentifikasi extends CI_Controller
     {
         //jika statusnya sudah login, maka tidak bisa mengakses halaman login alias dikembalikan ke tampilan user
         if ($this->session->userdata('email')) {
-            redirect('user');
+            redirect('home');
         }
         $this->form_validation->set_rules(
             'email',
@@ -37,10 +37,7 @@ class autentifikasi extends CI_Controller
     }
     private function _login()
     {
-        $email = htmlspecialchars($this->input->post(
-            'email',
-            true
-        ));
+        $email = htmlspecialchars($this->input->post('email', true));
         $password = $this->input->post('password', true);
         $user = $this->ModelUser->cekData(['email' => $email])->row_array();
         //jika usernya ada
@@ -64,7 +61,7 @@ class autentifikasi extends CI_Controller
                                     Ubah Profile Anda untuk Ubah Photo Profil</div>'
                             );
                         }
-                        redirect('user');
+                        redirect('home');
                     }
                 } else {
                     $this->session->set_flashdata('pesan', '<div
@@ -167,5 +164,14 @@ class="alert alert-success alert-message" role="alert">Selamat!!
 akun member anda sudah dibuat. Silahkan Aktivasi Akun anda</div>');
             redirect('autentifikasi');
         }
+    }
+    public function logout()
+    {
+        $this->session->unset_userdata('email');
+        $this->session->unset_userdata('role_id');
+
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Berhasil logout</div>');
+
+        redirect('home');
     }
 }

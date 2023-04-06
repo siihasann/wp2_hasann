@@ -1,10 +1,11 @@
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
+
     <!-- Main Content -->
     <div id="content">
+
         <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white
-topbar mb-4 static-top shadow">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
             <!-- Sidebar Toggle (Topbar) -->
             <button id="sidebarToggleTop" class="btn btn-link d-mdnone rounded-circle mr-3">
                 <i class="fa fa-bars"></i>
@@ -13,7 +14,9 @@ topbar mb-4 static-top shadow">
             <h1 class="h3 mb-2 text-gray-800"><?= $judul; ?></h1>
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
-                <div class="topbar-divider d-none d-sm-block"></div>
+                <div class="topbar-divider d-none d-sm-block">
+
+                </div>
                 <!-- Nav Item - User Information -->
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" ariahaspopup="true" aria-expanded="false">
@@ -22,17 +25,16 @@ topbar mb-4 static-top shadow">
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-rightshadow animated--grow-in" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="<?=
-                                                        base_url('user'); ?>">
-                            <i class="fas fa-user fa-sm fa-fw mr-2
-text-gray-400"></i>
+                        <a class="dropdown-item" href="<?= base_url('user'); ?>">
+                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                             Profile Saya
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="<?=
-                                                        base_url('autentifikasi/logout'); ?>" data-toggle="modal" datatarget="#logoutModal">
-                            <i class="fas fa-sign-out-alt fa-sm fafw mr-2 text-gray-400"></i>
+                        <a class="dropdown-item" <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                             Logout
+                        </a>
+
                         </a>
                     </div>
                 </li>
