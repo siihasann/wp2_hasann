@@ -10,17 +10,21 @@ class Home extends CI_Controller
         $data = [
             'judul' => "Katalog Buku",
             'buku' => $this->ModelBuku->getBuku()->result(),
+            'user' => $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array(),
+            'anggota' => $this->ModelUser->getUserLimit()->result_array()
         ];
         //jika sudah login dan jika belum login10
         if ($this->session->userdata('email')) {
             $user = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
             $data['user'] = $user['nama'];
             $this->load->view('templates/tamplates-user/header', $data);
+            $this->load->view('templates/tamplates-user/modal', $data);
             $this->load->view('buku/daftar_buku', $data);
-            $this->load->view('templates/tamplates-user/footer', $data);
+            $this->load->view('templates/footer');
         } else {
             $data['user'] = 'Pengunjung';
             $this->load->view('templates/tamplates-user/header', $data);
+            $this->load->view('templates/tamplates-user/modal', $data);
             $this->load->view('buku/daftar_buku', $data);
             $this->load->view('templates/tamplates-user/footer', $data);
         }
